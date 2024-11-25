@@ -1,0 +1,217 @@
+/* Importación de variables de colores para Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+    font-family: 'Febriella';
+    src: url('./assets/FebriellaFontDEMO.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'PlayfairB';
+    src: url('./assets/PlayfairDisplay-Bold.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+/* Estilos personalizados para el sobre */
+.envlope-wrapper {
+    @apply flex justify-center items-center h-screen;
+}
+
+#envelope {
+    @apply relative w-[400px] h-[260px] bg-white rounded-b-lg shadow-lg;
+    top: 150px;
+}
+
+.front {
+    @apply absolute z-30;
+    width: 0;
+    height: 0;
+}
+
+.flap {
+    border-left: 200px solid transparent;
+    border-right: 200px solid transparent;
+    border-bottom: calc(130px - 8px) solid transparent;
+    border-top: calc(130px + 8px) solid #54715a; /* Más oscuro que el sobre */
+    transform-origin: top;
+    pointer-events: none;
+}
+
+.pocket {
+    border-left: 200px solid #b9ddbe;
+    border-right: 200px solid #b9ddbe; /* Color ligeramente más oscuro para el bolsillo */
+    border-bottom: 130px solid #87b48d;
+    border-top: 130px solid transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.letter {
+    @apply relative bg-white w-[90%] h-[90%] mx-auto top-[5%] rounded-lg shadow-lg;
+    background-image: url('./assets/invitation-background-8.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilos para el título y el subtítulo */
+.letter .title {
+    @apply text-center text-6xl; /* Cursiva, centrado y mayor tamaño */
+    font-family: 'Febriella', cursive;
+    color: #DAA520; /* Color dorado */
+    margin-bottom: 30px; /* Espaciado */
+    margin-top: 15px
+}
+
+.letter .subtitle {
+    @apply text-center text-4xl; /* Cursiva, centrado y tamaño menor */
+    font-family: 'Febriella', cursive;
+    color: #DAA520; /* Color dorado */
+    letter-spacing: 1px; /* Espaciado entre letras */
+    margin-top: 30px; /* Espaciado con el título */
+}
+
+.letter:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 25%, rgba(215, 227, 239, 0.70) 55%, rgba(215, 227, 239, 1.00) 100%);
+}
+
+.words {
+    @apply absolute left-[10%] w-[80%] bg-gray-200;
+    height: 14%;
+}
+
+.words.line1 {
+    top: 15%;
+    width: 20%;
+    height: 7%;
+}
+
+.words.line2 {
+    top: 30%;
+}
+
+.words.line3 {
+    top: 50%;
+}
+
+.words.line4 {
+    top: 70%;
+}
+
+.open .flap {
+    transform: rotateX(180deg);
+    transition: transform 2.5s ease, z-index .6s;
+    z-index: 1;
+}
+
+.close .flap {
+    transform: rotateX(0deg);
+    transition: transform 1.4s .6s ease, z-index 1.6s;
+    z-index: 5;
+}
+
+.close .letter {
+    transform: translateY(0px); 
+    transition: transform 1.4s ease, z-index 2.5s;
+    z-index: 1;
+}
+
+.open .letter {
+    transform: translateY(-60px); /* Aproximadamente un tercio de la altura del sobre */
+    transition: transform 5.5s .6s ease, z-index .6s;
+    z-index: 2;
+}
+
+/* Estilo para corazones animados */
+.hearts {
+    @apply absolute z-20 left-0 right-0;
+    top: 120px;
+}
+
+.heart {
+    @apply absolute bottom-0 right-[10%];
+    pointer-events: none;
+}
+
+.heart:before,
+.heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #88c9a4;
+    border-radius: 50px 50px 0 0;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
+    pointer-events: none;
+}
+
+.heart:after {
+    left: 0;
+    transform: rotate(45deg);
+    transform-origin: 100% 100%;
+}
+
+.close .heart {
+    opacity: 0;
+    animation: none;
+}
+
+.a1 {
+    left: 20%;
+    transform: scale(0.6);
+    opacity: 1;
+    animation: slideUp 4s linear 1, sideSway 4s ease-in-out 4 alternate;
+    animation-fill-mode: forwards;
+    animation-delay: .7s;
+}
+
+.a2 {
+    left: 55%;
+    transform: scale(1);
+    opacity: 1;
+    animation: slideUp 6s linear 1, sideSway 6s ease-in-out 6 alternate;
+    animation-fill-mode: forwards;
+    animation-delay: .7s;
+}
+
+.a3 {
+    left: 10%;
+    transform: scale(0.8);
+    opacity: 1;
+    animation: slideUp 8s linear 1, sideSway 8s ease-in-out 8 alternate;
+    animation-fill-mode: forwards;
+    animation-delay: 1.7s;
+}
+
+@keyframes slideUp {
+    0% { top: 0; }
+    100% { top: -600px; }
+}
+
+@keyframes sideSway {
+    0% { margin-left: 0px; }
+    100% { margin-left: 50px; }
+}
+
+/* Estilo de los botones */
+.reset {
+    @apply text-center;
+}
+
+body {
+    @apply bg-slate-500;
+    background-image: url('./assets/invitation-background-letter.jpg');
+}
