@@ -68,7 +68,7 @@ const Fullpage = () => {
       });
 
       if (response.ok) {
-        setSuccessMessage('Confirmación enviada con éxito');
+        setSuccessMessage('Confirmación enviada con éxito, contamos con tu presencia ese dia');
         setFormData({ name: '', email: '', attendance: '', allergies: '' });
       } else {
         setErrorMessage('Error al enviar la confirmación. Intenta nuevamente.');
@@ -177,8 +177,7 @@ const Fullpage = () => {
             <p className="text-black max-w-lg text-center mb-4">
               Por favor recuerda confirmar asistencia y no olvides dejar a los niños con los abuelos, y venir a la fiesta a disfrutar.
             </p>
-            {successMessage && <p className="text-green-600 font-bold mb-4">{successMessage}</p>}
-            {errorMessage && <p className="text-red-600 font-bold mb-4">{errorMessage}</p>}
+
             <div className="bg-white/80 p-8 rounded-lg shadow-md w-full max-w-lg">
               <form onSubmit={handleFormSubmit} className="bg-white/80 p-8 rounded-lg shadow-md w-full max-w-lg">
                 <div className="mb-4">
@@ -237,6 +236,10 @@ const Fullpage = () => {
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Enviando...' : 'Enviar Confirmación'}
+
+                  {successMessage && <p className="text-green-600 font-bold mb-4">{successMessage}</p>}
+                  
+                  {errorMessage && <p className="text-red-600 font-bold mb-4">{errorMessage}</p>}
                 </button>
               </form>
             </div>
