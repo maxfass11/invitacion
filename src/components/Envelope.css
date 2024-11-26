@@ -23,7 +23,7 @@
 }
 
 #envelope {
-    @apply relative w-[400px] h-[260px] bg-white rounded-b-lg shadow-lg;
+    @apply relative w-[400px] h-[260px] bg-green-100 rounded-b-lg shadow-lg;
     top: 150px;
 }
 
@@ -171,7 +171,7 @@
 
 .a1 {
     left: 20%;
-    transform: scale(0.6);
+    transform: scale(0.6) rotate(0deg);
     opacity: 1;
     animation: slideUp 4s linear 1, sideSway 4s ease-in-out 4 alternate;
     animation-fill-mode: forwards;
@@ -180,7 +180,7 @@
 
 .a2 {
     left: 55%;
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
     opacity: 1;
     animation: slideUp 6s linear 1, sideSway 6s ease-in-out 6 alternate;
     animation-fill-mode: forwards;
@@ -189,7 +189,7 @@
 
 .a3 {
     left: 10%;
-    transform: scale(0.8);
+    transform: scale(0.8) rotate(0deg);
     opacity: 1;
     animation: slideUp 8s linear 1, sideSway 8s ease-in-out 8 alternate;
     animation-fill-mode: forwards;
@@ -197,8 +197,8 @@
 }
 
 @keyframes slideUp {
-    0% { top: 0; }
-    100% { top: -600px; }
+    0% { top: 0; opacity: 1; transform: rotate(0deg); }
+    100% { top: -600px; opacity: 0; transform: rotate(30deg); }
 }
 
 @keyframes sideSway {

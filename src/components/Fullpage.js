@@ -39,7 +39,7 @@ const Fullpage = () => {
       const timer = setTimeout(() => {
         setSuccessMessage('');
         setErrorMessage('');
-      }, 5000);
+      }, 7500);
       return () => clearTimeout(timer);
     }
   }, [successMessage, errorMessage]);
@@ -146,27 +146,30 @@ const Fullpage = () => {
             <CountdownComponent/>
           </div>
 
-          {/* Sección 4: Regalos */}
-          <div className="section bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `url(${background4})`}}>
+          {/* Sección 4: Presentes */}
+          <div className="section bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `url(${background5})`}}>
             <h3 className="text-4xl text-yellow-500 mb-4" style={{ fontFamily: 'PlayfairB' }}>Presentes</h3>
-            <p className="text-white text-2xl bg-green-800 bg-opacity-70 rounded max-w-96 mb-4">
-              Queridos amigos y familiares: Que nos acompañen en este día es el mejor regalo. Como nuestros planes nos llevan lejos y no va a entrar todo en una maleta, preferimos el dinero a modo de obsequio...
+            <p className="text-black mb-4 max-w-96" style={{ fontFamily: 'PlayfairB' }}>
+            Queridos amigos y familiares: Que nos acompañen en este dia es el mejor regalo. Como nuestros planes nos llevan lejos y no va a entrar todo en una maleta, si quieren hacernos un regalo preferimos que sea por el siguiente medio
             </p>
-            <div className="text-white text-2xl bg-green-800 bg-opacity-70 rounded max-w-96 flex flex-col items-center">
-              <p>Alias: ARIAS.EXAMEN.LLANTA</p>
-              <p>CBU: 0720102488000001997204</p>  
-              <p>Cuenta:102-019972/0</p>  
+            <div className="text-white text-2xl bg-green-800 bg-opacity-70 rounded max-w-96 flex flex-col items-center" style={{ fontFamily: 'PlayfairB' }}> 
+              <p>Alias: BODA.PEDRO.AGUS</p>
+              <p>CBU: 0720390788000036779840</p>  
+              <p>Cuenta:390-367798/4</p>  
               <p>Banco: Santander</p>  
             </div>
           </div>
 
           {/* Sección 5: Cómo Llegar */}
-          <div className="section fp-noscroll bg-cover bg-center flex flex-col justify-center items-center h-screen" style={{ backgroundImage: `url(${background5})`}}>
+          <div className="section fp-noscroll bg-cover bg-center flex flex-col justify-center items-center h-screen" style={{ backgroundImage: `url(${background4})`}}>
             <h3 className="text-yellow-500 text-4xl mb-4" style={{ fontFamily: 'PlayfairB, cursive' }}>Cómo Llegar...</h3>
-            <p className="text-black mb-4 max-w-96">
+            <p className="text-white mb-4 max-w-96 bg-black bg-opacity-70" style={{ fontFamily: 'PlayfairB' }}>
               La boda se llevará a cabo en un lugar especial, asegúrate de revisar la ubicación para llegar sin problemas.
             </p>
-            <a href="https://maps.app.goo.gl/HMjB4CCcXhyaKPn46" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition duration-300">
+            <p className="text-white mb-4 max-w-96 bg-black bg-opacity-70" style={{ fontFamily: 'PlayfairB' }}>
+              El codigo de vestimenta es elegante-sporto/casula.
+            </p>
+            <a href="https://maps.app.goo.gl/HMjB4CCcXhyaKPn46" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-300">
               Ver Ubicación en Google Maps
             </a>
           </div>
@@ -238,7 +241,7 @@ const Fullpage = () => {
                   {isSubmitting ? 'Enviando...' : 'Enviar Confirmación'}
 
                   {successMessage && <p className="text-green-600 font-bold mb-4">{successMessage}</p>}
-                  
+
                   {errorMessage && <p className="text-red-600 font-bold mb-4">{errorMessage}</p>}
                 </button>
               </form>
