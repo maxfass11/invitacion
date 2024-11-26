@@ -110,8 +110,8 @@ const Fullpage = () => {
         <ReactFullpage.Wrapper>
           {/* Sección 1: Invitación */}
           <div className="section fp-noscroll bg-cover bg-center flex flex-col justify-center items-center h-screen" style={{ backgroundImage: `url(${background8})`}}>
-            <h1 className="text-yellow-500 text-6xl" style={{ fontFamily: 'Febriella' }}>
-              {renderAnimatedText('Agustina & Pedro')}
+            <h1 className="text-yellow-500 text-7xl" style={{ fontFamily: 'Febriella' }}>
+              {renderAnimatedText('Agus & Pedro')}
             </h1>
             <motion.p className="text-black text-3xl font-semibold mt-4 flex flex-col items-center"
              style={{ fontFamily: 'Febriella, cursive' }}
@@ -119,7 +119,7 @@ const Fullpage = () => {
              animate={{ opacity: 1 }}
              transition={{ delay: 2, duration: 10, ease: "linear" }}
             >
-            21 de Diciembre de 2024 - 19 hs
+            21 de Diciembre 2024 - 19 hs
             </motion.p>
           </div>
 
@@ -158,7 +158,7 @@ const Fullpage = () => {
               <p>Cuenta:390-367798/4</p>  
               <p>Banco: Santander</p>  
             </div>
-            <p className="text-black mb-4 mt-4 max-w-96" style={{ fontFamily: 'PlayfairB' }}>Sin embargo su compañia en este dia siempre será el mejor regalo. </p>
+            <p className="text-black mb-4 mt-4 max-w-96" style={{ fontFamily: 'PlayfairB' }}>Sin embargo, su compañía en este día siempre será el mejor regalo. </p>
           </div>
 
           {/* Sección 5: Cómo Llegar */}
@@ -251,7 +251,7 @@ const Fullpage = () => {
 
           {/* Sección 7: Despedida */}
           <div className="section bg-cover bg-center flex flex-col justify-center items-center h-screen" style={{ backgroundImage: `url(${background4})`}}>
-            <h3 className="max-w-80 text-3xl text-white bg-black bg-opacity-90 rounded mb-4 text-center" style={{ fontFamily: 'PlayfairB, cursive'}}>Estamos muy emocionados de compartir este día tan especial con ustedes. Esperamos que puedan acompañarnos en nuestra boda y hacer de este momento un recuerdo inolvidable.</h3>
+            <h3 className="max-w-80 text-2xl text-white bg-black bg-opacity-85 rounded mb-4 text-center" style={{ fontFamily: 'PlayfairB, cursive'}}>Estamos muy emocionados de compartir este día tan especial con ustedes. Esperamos que puedan acompañarnos en nuestra boda y hacer de este momento un recuerdo inolvidable.</h3>
           </div>
 
         </ReactFullpage.Wrapper>
