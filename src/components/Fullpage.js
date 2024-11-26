@@ -59,7 +59,7 @@ const Fullpage = () => {
     setErrorMessage("");
 
     try {
-      const response = await fetch('http://backend-invitacion-production.up.railway.app', {
+      const response = await fetch('https://backend-invitacion-production.up.railway.app', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
