@@ -60,7 +60,7 @@
 
 /* Estilos para el título y el subtítulo */
 .letter .title {
-    @apply text-center text-6xl; /* Cursiva, centrado y mayor tamaño */
+    @apply text-center text-5xl; /* Cursiva, centrado y mayor tamaño */
     font-family: 'Febriella', cursive;
     color: #DAA520; /* Color dorado */
     margin-bottom: 30px; /* Espaciado */
@@ -68,7 +68,7 @@
 }
 
 .letter .subtitle {
-    @apply text-center text-4xl; /* Cursiva, centrado y tamaño menor */
+    @apply text-center text-3xl; /* Cursiva, centrado y tamaño menor */
     font-family: 'Febriella', cursive;
     color: #DAA520; /* Color dorado */
     letter-spacing: 1px; /* Espaciado entre letras */

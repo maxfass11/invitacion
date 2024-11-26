@@ -110,10 +110,10 @@ const Fullpage = () => {
         <ReactFullpage.Wrapper>
           {/* Sección 1: Invitación */}
           <div className="section fp-noscroll bg-cover bg-center flex flex-col justify-center items-center h-screen" style={{ backgroundImage: `url(${background8})`}}>
-            <h1 className="text-yellow-500 text-7xl" style={{ fontFamily: 'Febriella' }}>
+            <h1 className="text-yellow-500 text-6xl" style={{ fontFamily: 'Febriella' }}>
               {renderAnimatedText('Agustina & Pedro')}
             </h1>
-            <motion.p className="text-black text-4xl font-semibold mt-4 flex flex-col items-center"
+            <motion.p className="text-black text-3xl font-semibold mt-4 flex flex-col items-center"
              style={{ fontFamily: 'Febriella, cursive' }}
              initial={{ opacity: 0 }}
              animate={{ opacity: 1 }}
@@ -146,28 +146,29 @@ const Fullpage = () => {
             <CountdownComponent/>
           </div>
 
-          {/* Sección 4: Presentes */}
+          {/* Sección 4: Obsequios */}
           <div className="section bg-cover bg-center flex justify-center items-center" style={{ backgroundImage: `url(${background5})`}}>
-            <h3 className="text-4xl text-yellow-500 mb-4" style={{ fontFamily: 'PlayfairB' }}>Presentes</h3>
+            <h3 className="text-4xl text-yellow-500 mb-4" style={{ fontFamily: 'PlayfairB' }}>Obsequios</h3>
             <p className="text-black mb-4 max-w-96" style={{ fontFamily: 'PlayfairB' }}>
-            Queridos amigos y familiares: Que nos acompañen en este dia es el mejor regalo. Como nuestros planes nos llevan lejos y no va a entrar todo en una maleta, si quieren hacernos un regalo preferimos que sea por el siguiente medio
+            Queridos amigos y familiares: Como nuestros planes nos llevan lejos y no va a entrar todo en una maleta, si quieren hacernos un regalo, preferimos que sea por el siguiente medio:
             </p>
-            <div className="text-white text-2xl bg-green-800 bg-opacity-70 rounded max-w-96 flex flex-col items-center" style={{ fontFamily: 'PlayfairB' }}> 
+            <div className="text-white bg-green-800 bg-opacity-70 rounded max-w-96 flex flex-col items-center" style={{ fontFamily: 'PlayfairB' }}> 
               <p>Alias: BODA.PEDRO.AGUS</p>
               <p>CBU: 0720390788000036779840</p>  
               <p>Cuenta:390-367798/4</p>  
               <p>Banco: Santander</p>  
             </div>
+            <p className="text-black mb-4 mt-4 max-w-96" style={{ fontFamily: 'PlayfairB' }}>Sin embargo su compañia en este dia siempre será el mejor regalo. </p>
           </div>
 
           {/* Sección 5: Cómo Llegar */}
-          <div className="section fp-noscroll bg-cover bg-center flex flex-col justify-center items-center h-screen" style={{ backgroundImage: `url(${background4})`}}>
+          <div className="section fp-noscroll bg-cover bg-center flex flex-col justify-center items-center h-screen" style={{ backgroundImage: `url(${background2})`}}>
             <h3 className="text-yellow-500 text-4xl mb-4" style={{ fontFamily: 'PlayfairB, cursive' }}>Cómo Llegar...</h3>
-            <p className="text-white mb-4 max-w-96 bg-black bg-opacity-70" style={{ fontFamily: 'PlayfairB' }}>
+            <p className="text-black mb-4 max-w-96" style={{ fontFamily: 'PlayfairB' }}>
               La boda se llevará a cabo en un lugar especial, asegúrate de revisar la ubicación para llegar sin problemas.
             </p>
-            <p className="text-white mb-4 max-w-96 bg-black bg-opacity-70" style={{ fontFamily: 'PlayfairB' }}>
-              El codigo de vestimenta es elegante-sporto/casula.
+            <p className="text-black mb-4 max-w-96" style={{ fontFamily: 'PlayfairB' }}>
+              Podés ir vestido como quieras, sugerimos que sea elegante sport / casual.
             </p>
             <a href="https://maps.app.goo.gl/HMjB4CCcXhyaKPn46" target="_blank" rel="noopener noreferrer" className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition duration-300">
               Ver Ubicación en Google Maps
@@ -177,11 +178,11 @@ const Fullpage = () => {
           {/* Sección 6: Confirmación de Asistencia */}
           <div className="section bg-cover bg-center flex flex-col justify-center items-center h-screen" style={{ backgroundImage: `url(${background6})`}}>
             <h3 className="text-4xl text-yellow-500 mb-4 text-center" style={{ fontFamily: 'PlayfairB, cursive' }}>Confirmación de Asistencia</h3>
-            <p className="text-black max-w-lg text-center mb-4">
+            <p className="text-black max-w-lg text-center mb-4" style={{ fontFamily: 'PlayfairB, cursive' }}>
               Por favor recuerda confirmar asistencia y no olvides dejar a los niños con los abuelos, y venir a la fiesta a disfrutar.
             </p>
 
-            <div className="bg-white/80 p-8 rounded-lg shadow-md w-full max-w-lg">
+            <div className="bg-white/80 p-5 rounded-lg shadow-md w-full max-w-lg">
               <form onSubmit={handleFormSubmit} className="bg-white/80 p-8 rounded-lg shadow-md w-full max-w-lg">
                 <div className="mb-4">
                   <label htmlFor="name" className="block text-black font-bold mb-2">Nombre y Apellido:</label>
@@ -230,7 +231,7 @@ const Fullpage = () => {
                     value={formData.allergies}
                     onChange={handleChange}
                     className="w-full p-2 border border-gray-300 rounded-lg"
-                    rows="3"
+                    rows="1"
                   ></textarea>
                 </div>
                 <button
@@ -249,8 +250,8 @@ const Fullpage = () => {
           </div>
 
           {/* Sección 7: Despedida */}
-          <div className="section bg-cover bg-center flex flex-col justify-center items-center h-screen" style={{ backgroundImage: `url(${background2})`}}>
-            <h3 className="max-w-80 text-3xl text-yellow-500 mb-4 text-center" style={{ fontFamily: 'PlayfairB, cursive'}}>Estamos muy emocionados de compartir este día tan especial con ustedes. Esperamos que puedan acompañarnos en nuestra boda y hacer de este día un recuerdo inolvidable.</h3>
+          <div className="section bg-cover bg-center flex flex-col justify-center items-center h-screen" style={{ backgroundImage: `url(${background4})`}}>
+            <h3 className="max-w-80 text-3xl text-white bg-black bg-opacity-90 rounded mb-4 text-center" style={{ fontFamily: 'PlayfairB, cursive'}}>Estamos muy emocionados de compartir este día tan especial con ustedes. Esperamos que puedan acompañarnos en nuestra boda y hacer de este momento un recuerdo inolvidable.</h3>
           </div>
 
         </ReactFullpage.Wrapper>
